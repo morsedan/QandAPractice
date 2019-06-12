@@ -19,30 +19,70 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" textLabel="wdU-Qd-BDe" detailTextLabel="Vhq-ke-Qmc" style="IBUITableViewCellStyleValue1" id="80U-97-Dit">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionCell" rowHeight="100" id="80U-97-Dit" customClass="QuestionTableViewCell" customModule="QandAPractice" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="80U-97-Dit" id="RXY-aJ-N3Z">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Question!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wdU-Qd-BDe">
-                                            <rect key="frame" x="20" y="12" width="79" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Asker!!" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vhq-ke-Qmc">
-                                            <rect key="frame" x="340.5" y="12" width="53.5" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jUW-KA-MHr">
+                                            <rect key="frame" x="28" y="8" width="358" height="83.5"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="aN9-oo-aGC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="358" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Question:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQT-u2-pRD">
+                                                            <rect key="frame" x="0.0" y="0.0" width="77.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JoZ-jM-Umu">
+                                                            <rect key="frame" x="85.5" y="0.0" width="272.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Myx-ow-TxP">
+                                                    <rect key="frame" x="0.0" y="28.5" width="358" height="20.5"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Asked By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vZg-0m-ZpO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="79.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKC-vY-6WM">
+                                                            <rect key="frame" x="87.5" y="0.0" width="270.5" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Can you answer this?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6w-pH-Fds">
+                                                    <rect key="frame" x="0.0" y="57" width="358" height="26.5"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="jUW-KA-MHr" secondAttribute="bottom" constant="8" id="Jbd-gr-kWN"/>
+                                        <constraint firstItem="jUW-KA-MHr" firstAttribute="leading" secondItem="RXY-aJ-N3Z" secondAttribute="leadingMargin" constant="8" id="KH5-uA-JAx"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="jUW-KA-MHr" secondAttribute="trailing" constant="8" id="P1j-h7-7N5"/>
+                                        <constraint firstItem="jUW-KA-MHr" firstAttribute="top" secondItem="RXY-aJ-N3Z" secondAttribute="top" constant="8" id="hRm-UH-yvS"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="askerLabel" destination="bKC-vY-6WM" id="N6r-1C-l8p"/>
+                                    <outlet property="promptLabel" destination="o6w-pH-Fds" id="ZH4-f8-13J"/>
+                                    <outlet property="questionLabel" destination="JoZ-jM-Umu" id="vXB-SJ-swV"/>
                                     <segue destination="HAr-GI-rxU" kind="show" identifier="AnswerQuestion" id="BoS-Vj-2zT"/>
                                 </connections>
                             </tableViewCell>
@@ -62,7 +102,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hx7-JS-0Zz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="514" y="167"/>
+            <point key="canvasLocation" x="513.04347826086962" y="166.74107142857142"/>
         </scene>
         <!--Question Here!!-->
         <scene sceneID="Ev7-wb-qF7">
@@ -116,7 +156,11 @@
                         <viewLayoutGuide key="safeArea" id="IWR-bu-KNY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Question Here!!" id="nlq-la-FHO">
-                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="2WR-Xd-xx8"/>
+                        <barButtonItem key="rightBarButtonItem" title="Submit Answer" id="2WR-Xd-xx8">
+                            <connections>
+                                <action selector="submitAnswerButtonTapped:" destination="HAr-GI-rxU" id="zZM-sy-y6s"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="answerTextView" destination="zMC-G9-5m5" id="Baj-co-2ll"/>

@@ -20,7 +20,6 @@ class AnswerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         updateViews()
     }
     
@@ -28,17 +27,17 @@ class AnswerViewController: UIViewController {
         navigationItem.title = question?.questionText
         questionLabel.text = question?.questionText
         askerLabel.text = question?.asker
+        guard let answerer = question?.answerer, let answer = question?.answer else { return }
+        answererTextField.text = answerer
+        answerTextView.text = answer
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func submitAnswerButtonTapped(_ sender: Any) {
+        guard let question = question else { return }
+        let answerer = answererTextField.text
+        let answer = answerTextView.text
+        
+        questionController?.updateQuestion(question: question, answerer: answerer, answer: answer)
+        navigationController?.popViewController(animated: true)
     }
-    */
-
 }

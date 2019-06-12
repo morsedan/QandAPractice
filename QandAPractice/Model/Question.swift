@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct Question {
+struct Question: Equatable {
     let asker: String
-    var questionText: String
-    let answerer: String?
+    let questionText: String
+    var answerer: String?
     var answer: String?
     
     init(asker: String, questionText: String, answerer: String? = nil, answer: String? = nil) {
